@@ -29,7 +29,7 @@ jobs:
           read-only: true
 
       - name: Cache Gradle Wrapper
-        uses: actions/cache@v2
+        uses: actions/cache@v3
         with:
           path: ~/.gradle/wrapper
           key: ${{ runner.os }}-gradle-wrapper-cache-${{ hashFiles('smoke-tests/fake-backend/gradle/wrapper/gradle-wrapper.properties') }}
@@ -73,7 +73,7 @@ jobs:
           job-id: fakebackend-smoke
 
       - name: Cache Gradle Wrapper
-        uses: actions/cache@v2
+        uses: actions/cache@v3
         with:
           path: ~/.gradle/wrapper
           key: ${{ runner.os }}-gradle-wrapper-cache-${{ hashFiles('smoke-tests/fake-backend/gradle/wrapper/gradle-wrapper.properties') }}
